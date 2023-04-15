@@ -11,7 +11,7 @@ WORKDIR /opt/riscv/xuantie-gnu-toolchain
 
 RUN git submodule update --init --recursive --depth=1 && \
   ./configure --prefix=/opt/riscv --enable-multilib && \
-  make -j && \
+  make -j$(nproc) && \
   make install && \
   rm -rf /opt/riscv/xuantie-gnu-toolchain
 
