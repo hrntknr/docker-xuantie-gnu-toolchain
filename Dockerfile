@@ -14,7 +14,7 @@ RUN git init && \
   git checkout FETCH_HEAD && \
   git submodule update --init --recursive --depth=1 && \
   ./configure --prefix=/opt/riscv --enable-multilib && \
-  make -j$(nproc) && \
+  make -j && \
   make install && \
   rm -rf /opt/riscv/xuantie-gnu-toolchain
 
