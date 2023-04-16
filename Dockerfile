@@ -1,6 +1,6 @@
 FROM debian
 
-ARG commit=b181cea
+ARG commit="b181cea304aecee223acda55b05f60a1293c76d9"
 
 RUN apt-get update && \
   apt-get install -y autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev git
